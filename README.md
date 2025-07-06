@@ -48,9 +48,8 @@
 ---
 ## 📋 Product Backlog URL
 
-🔗 **[Product Backlog](https://github.com/CutisAI/DermaCheck/projects/1)**
+🔗 **[Product Backlog](https://docs.google.com/spreadsheets/d/1H3UxpLTYpxyYXwBKO0GicLXYIxjtdqUwPHTbR4E1AAE/edit?usp=sharing)**
 
-*Not: Placeholder link - gerçek backlog URL'si buraya eklenecek*
 
 ---
 
