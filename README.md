@@ -478,7 +478,7 @@ SOFTWARE.
 
 **🚀 Birlikte daha sağlıklı bir gelecek inşa ediyoruz!**
 
-![DermaCheck Logo](https://placeholder-link.com/dermacheck-footer.png)
+![DermaCheck Logo](https://github.com/Porphyri0n/Takim88/blob/main/Assets/cutisAI-logo.png)
 
 ---
 
