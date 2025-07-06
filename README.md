@@ -10,25 +10,6 @@
   <img src="https://placeholder-link.com/dermacheck-logo.png" alt="DermaCheck Logo" width="200">
 </p>
 
-## 📑 İçindekiler
-
-- [Takım İsmi](#-takım-ismi)
-- [Takım Elemanları](#-takım-elemanları)
-- [Ürün İsmi](#-ürün-ismi)
-- [Product Backlog URL](#-product-backlog-url)
-- [Ürün Açıklaması](#-ürün-açıklaması)
-- [Ürün Özellikleri](#-ürün-özellikleri)
-- [Sprint 1 Dokümantasyonu](#-sprint-1-dokümantasyonu)
-- [Teknik Özellikler](#-teknik-özellikler)
-- [Dataset Bilgisi](#-dataset-bilgisi)
-- [Kurulum](#-kurulum)
-- [Kullanım](#-kullanım)
-- [Katkıda Bulunma](#-katkıda-bulunma)
-- [Lisans](#-lisans)
-- [İletişim](#-iletişim)
-
----
-
 ## 👥 Takım İsmi
 
 **CutisAI**
