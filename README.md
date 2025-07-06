@@ -197,9 +197,8 @@ Günlük Özet: Sprint 1 deliverables %95 hazır durumda. Final README review ya
 - **Done (2 item):** Sprint planlama, Takım organizasyonu
 
 #### 🔥 Burndown Chart
-```
+![BurnDownChart](https://docs.google.com/spreadsheets/d/1HCr53uS3f-IaaLBxM8PCYHqUIzO-AcQx4XWBKz5UTdk/edit?usp=sharing)
 
-```
 
 ---
 
