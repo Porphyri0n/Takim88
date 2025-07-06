@@ -134,7 +134,6 @@ DermaCheck, kullanıcıların yüklediği cilt görüntülerini yapay zekâ yard
 ---
 
 ### 🗣️ Daily Scrum
-🗣️ Daily Scrum
 
 📅 20 Haziran 2024 - Sprint 1 Başlangıcı
 
