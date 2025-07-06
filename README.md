@@ -122,7 +122,7 @@ DermaCheck, kullanıcıların yüklediği cilt görüntülerini yapay zekâ yard
 **Sprint Hedefi:** Proje temellerinin atılması ve geliştirme ortamının hazırlanması  
 **Sprint Süresi:** 2.5 hafta (20 Haziran - 6 Temmuz 2024)  
 **Sprint Planlaması:** 20 Haziran 2024, 10:00  
-**İlk Commit Tarihi:** 7 Temmuz 2024
+**İlk Kod Commit Tarihi:** 7 Temmuz 2024
 
 #### Sprint Kapsamı
 - Proje repository kurulumu ve GitHub organizasyonu
@@ -130,33 +130,6 @@ DermaCheck, kullanıcıların yüklediği cilt görüntülerini yapay zekâ yard
 - Takım koordinasyonu ve iş akışının belirlenmesi
 - Temel proje yapısının oluşturulması
 - Sprint 2 için hazırlık çalışmaları
-
----
-
-### 📊 Tahmin Edilen Tamamlanacak Puan
-
-**Toplam Sprint Kapasitesi:** 25 Hikaye Puanı  
-**Taahhüt Edilen Puan:** 20 Hikaye Puanı
-
-*Sprint 1 kapsamında temel proje kurulumu ve dokümantasyon işlerine odaklanılacaktır. Detaylı puan dağılımı Sprint 2'de ML geliştirme aşamasında belirlenecektir.*
-
----
-
-### 📈 Tahmin Mantığı
-
-**Planning Poker Tekniği** kullanılarak tahminler yapıldı:
-
-- **Fibonacci Serisi** (1, 2, 3, 5, 8, 13, 21) kullanıldı
-- **Karmaşıklık faktörleri:**
-  - Teknik zorluk seviyesi
-  - Bağımlılıklar
-  - Takım deneyimi
-  - Risk faktörleri
-
-**Tahmin Örnekleri:**
-- Basit frontend bileşenleri: 3-5 puan
-- Orta düzey backend API: 8 puan
-- Karmaşık ML model implementasyonu: 13 puan
 
 ---
 
@@ -207,21 +180,7 @@ DermaCheck, kullanıcıların yüklediği cilt görüntülerini yapay zekâ yard
 
 #### 🔥 Burndown Chart
 ```
-Kalan İş Yükü (Story Points)
-20 |●
-18 |  ●
-16 |    ●
-14 |      ●
-12 |        ●
-10 |          ○ ← Mevcut durum
- 8 |            ○
- 6 |              ○
- 4 |                ○
- 2 |                  ○
- 0 |____________________○
-   1  3  5  7  9  11 13 15 17 (Gün)
-   
-● Planlanan  ○ Gerçek
+
 ```
 
 ---
@@ -369,8 +328,10 @@ Genel Skor: 8.8/10 🌟
 ```
 ┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
 │   Web Frontend  │────│   Backend API   │────│   ML Pipeline   │
-│   (React.js)    │    │   (Flask)       │    │  (TensorFlow)   │
-└─────────────────┘    └─────────────────┘    └─────────────────┘
+│   (React.js)    │    │   (Flask)       │    │  (TensorFlow or |
+└─────────────────┘    └─────────────────┘    | Pytorch testing |
+                                              |  in Progress)   │
+                                              └─────────────────┘
 ```
 
 ### 🤖 Model Özellikleri
@@ -446,206 +407,6 @@ HAM10000 ("Human Against Machine with 10000 training images") dataset'i, Interna
 
 ---
 
-## 💻 Kurulum
-
-### 📋 Sistem Gereksinimleri
-
-**Minimum Gereksinimler:**
-- Python 3.8+
-- 8GB RAM  
-- 10GB boş disk alanı
-- İnternet bağlantısı
-
-### 🚀 Hızlı Başlangıç
-
-#### 1. Repository'yi Klonlayın
-
-```bash
-git clone https://github.com/CutisAI/DermaCheck.git
-cd DermaCheck
-```
-
-#### 2. Sanal Ortam Oluşturun
-
-```bash
-# Python venv kullanarak
-python -m venv dermacheck_env
-
-# Linux/Mac
-source dermacheck_env/bin/activate
-
-# Windows
-dermacheck_env\Scripts\activate
-```
-
-#### 3. Bağımlılıkları Yükleyin
-
-```bash
-# Temel bağımlılıklar
-pip install -r requirements.txt
-```
-
-#### 4. Uygulamayı Başlatın
-
-```bash
-# Development server
-python app.py
-
-# Tarayıcıda açın: http://localhost:5000
-```
-
-*Detaylı kurulum talimatları Sprint 2'de eklenecektir.*
-
----
-
-## 🎮 Kullanım
-
-### 🌐 Web Arayüzü
-
-#### Temel Kullanım
-
-1. **Ana Sayfaya Gidin:** `http://localhost:5000`
-2. **Görüntü Yükleyin:** "Görüntü Seç" butonuna tıklayın
-3. **Analiz Başlatın:** "Analiz Et" butonuna tıklayın
-4. **Sonuçları İnceleyin:** Analiz sonuçları ve önerileri görüntüleyin
-
-#### 📤 Desteklenen Dosya Formatları
-
-- **JPG/JPEG** (önerilen)
-- **PNG**
-- **Maximum boyut:** 10MB
-
-*Detaylı kullanım kılavuzu ve API dokümantasyonu Sprint 2 ve 3'te eklenecektir.*
-
----
-
-## 🤝 Katkıda Bulunma
-
-Projeye katkıda bulunmak istediğiniz için teşekkürler! Katkılarınız projenin gelişimi için çok değerli.
-
-### 🔄 Katkı Süreci
-
-1. **Repository'yi Fork Edin**
-   ```bash
-   # GitHub'da fork butonuna tıklayın
-   git clone https://github.com/your-username/DermaCheck.git
-   ```
-
-2. **Feature Branch Oluşturun**
-   ```bash
-   git checkout -b feature/yeni-ozellik
-   ```
-
-3. **Değişikliklerinizi Yapın**
-   - Kod standartlarına uygun geliştirme yapın
-   - Test yazın ve çalıştırın
-   - Dokümantasyonu güncelleyin
-
-4. **Commit ve Push**
-   ```bash
-   git add .
-   git commit -m "feat: yeni özellik eklendi"
-   git push origin feature/yeni-ozellik
-   ```
-
-5. **Pull Request Oluşturun**
-   - Açıklayıcı başlık ve açıklama yazın
-   - İlgili issue'ları link edin
-   - Screenshot ekleyin (UI değişiklikleri için)
-
-### 📝 Kodlama Standartları
-
-**Python Kodlama Standartları:**
-- PEP 8 stil rehberini takip edin
-- Fonksiyonlar için docstring yazın
-- Type hints kullanın
-- 80 karakter satır limiti
-
-```python
-def analyze_image(image_path: str) -> Dict[str, Any]:
-    """
-    Cilt görüntüsünü analiz eder.
-    
-    Args:
-        image_path (str): Analiz edilecek görüntünün yolu
-        
-    Returns:
-        Dict[str, Any]: Analiz sonuçları
-    """
-    pass
-```
-
-**JavaScript/TypeScript Standartları:**
-- ESLint kurallarını takip edin
-- Prettier code formatting
-- Camel case isimlendirme
-
-### 🧪 Test Yazma
-
-```python
-import unittest
-from dermacheck.analyzer import DermaAnalyzer
-
-class TestDermaAnalyzer(unittest.TestCase):
-    def setUp(self):
-        self.analyzer = DermaAnalyzer()
-    
-    def test_analyze_image_success(self):
-        result = self.analyzer.analyze_image("test_image.jpg")
-        self.assertIn("prediction", result)
-        self.assertIn("confidence", result)
-
-if __name__ == "__main__":
-    unittest.main()
-```
-
-### 🐛 Issue Raporlama
-
-Issue oluştururken lütfen şu template'i kullanın:
-
-```markdown
-## 🐛 Bug Raporu
-
-### Açıklama
-Kısa ve net bug açıklaması
-
-### Tekrar Etme Adımları
-1. Şu sayfaya git
-2. Şu butona tıkla
-3. Şu hatayı gör
-
-### Beklenen Davranış
-Ne bekleniyordu
-
-### Ekran Görüntüleri
-Varsa screenshot ekle
-
-### Ortam Bilgileri
-- OS: [Ubuntu 20.04]
-- Browser: [Chrome 95.0]
-- Python Version: [3.9.7]
-```
-
-### 🌟 Feature İsteği
-
-```markdown
-## ✨ Feature İsteği
-
-### Sorun
-Hangi problemi çözüyor?
-
-### Çözüm
-Önerilen çözüm nedir?
-
-### Alternatifler
-Başka ne düşündünüz?
-
-### Ek Bilgiler
-Başka eklemek istediğiniz var mı?
-```
-
----
-
 ## 📄 Lisans
 
 Bu proje **MIT Lisansı** altında lisanslanmıştır. Detaylar için [LICENSE](LICENSE) dosyasına bakın.
@@ -698,16 +459,7 @@ SOFTWARE.
 
 ### 🏢 Proje İletişim
 
-- **Website:** [https://dermacheck.cutisai.com](https://placeholder-link.com)
 - **Repository:** [https://github.com/CutisAI/DermaCheck](https://github.com/CutisAI/DermaCheck)
-- **Issue Tracker:** [GitHub Issues](https://github.com/CutisAI/DermaCheck/issues)
-- **Dokümantasyon:** [Docs](https://docs.dermacheck.cutisai.com)
-
-### 💬 Topluluk
-
-- **Discord:** [CutisAI Community](https://discord.gg/cutisai)
-- **Slack:** [Workspace](https://cutisai.slack.com)
-- **Twitter:** [@CutisAI](https://twitter.com/CutisAI)
 
 ---
 
