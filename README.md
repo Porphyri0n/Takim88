@@ -79,7 +79,7 @@
 - `screenshots/board_sprint1_*.png`: Sprint board güncellemeleri  
 - `docs/sprint1_review.md`, `docs/sprint1_retro.md`: Review ve Retrospective notları  
 
-> 📝 **Not:** İlk commit ve placeholder dosyalar 20 Haziran’da eklenecek.  
+> 📝 **Not:** İlk commit ve placeholder dosyalar 7 Temmuz’da eklenecek.  
 
 ---
 
