@@ -16,6 +16,12 @@
 
 ---
 
+## Takım Logosu
+<p align="left">
+  <img src="https://github.com/Porphyri0n/Takim88/blob/main/Assets/cutisAI-logo.png" alt="DermaCheck Logo" width="200">
+</p>
+---
+
 ## 🧑‍💻 Takım Elemanları
 
 | Rol | İsim | Aktif Görevler | Pasif Görevler |
@@ -37,6 +43,8 @@
 <p align="left">
   <img src="https://github.com/Porphyri0n/Takim88/blob/main/Assets/dermacheck-logo.png" alt="DermaCheck Logo" width="200">
 </p>
+
+---
 ## 📋 Product Backlog URL
 
 🔗 **[Product Backlog](https://github.com/CutisAI/DermaCheck/projects/1)**
