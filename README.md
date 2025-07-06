@@ -181,7 +181,7 @@ Günlük Özet: Sprint 1 deliverables %95 hazır durumda. Final README review ya
 
 ### 📋 Sprint Board Updates
 
-**Board URL:** [Sprint Board](https://github.com/CutisAI/DermaCheck/projects/1)
+**Board URL:** [Sprint Board](https://docs.google.com/spreadsheets/d/1yrPElOCZxonByDCxff-rVRn_BDlIlUAShSRS_oCt27w/edit?usp=sharing)
 
 #### 📊 Güncel Sprint Durumu (2 Temmuz 2024)
 
