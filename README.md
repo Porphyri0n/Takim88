@@ -18,12 +18,12 @@
 
 ## 🧑‍💻 Takım Elemanları
 
-| Rol | İsim | Sorumluluklar |
-|-----|------|---------------|
-| **Scrum Master & ML Developer** | **Erdoğan Başer** | **Aktif Görevler:**\<br\>- ML model geliştirme\<br\>- Frontend\<br\>\<br\>**Pasif Görevler:**\<br\>- Proje koordinasyonu |
-| **ML Developer & Frontend** | **Emir Ayyıldız** | **Aktif Görevler:**\<br\>- ML model optimizasyonu\<br\>- Kullanıcı arayüzü |
-| **ML Developer & Backend** | **Eminenur Yıldız** | **Aktif Görevler:**\<br\>- ML pipeline\<br\>- Backend API geliştirme |
-| **ML Developer & Backend** | **Gizem Erpek** | **Aktif Görevler:**\<br\>- Veri işleme\<br\>- Backend altyapı |
+| Rol | İsim | Aktif Görevler | Pasif Görevler |
+|---|---|---|---|
+| **Scrum Master & ML Developer** | **Erdoğan Başer** | Proje koordinasyonu | ML model geliştirme, Frontend |
+| **ML Developer & Frontend** | **Emir Ayyıldız** | ML model optimizasyonu | Kullanıcı arayüzü |
+| **ML Developer & Backend** | **Eminenur Yıldız** | ML pipeline Backend | API geliştirme |
+| **ML Developer & Backend** | **Gizem Erpek** | - Veri işleme | Backend altyapı | 
 
 ---
 
