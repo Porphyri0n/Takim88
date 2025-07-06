@@ -135,6 +135,7 @@ DermaCheck, kullanıcıların yüklediği cilt görüntülerini yapay zekâ yard
 
 ### 🗣️ Daily Scrum
 🗣️ Daily Scrum
+
 📅 20 Haziran 2024 - Sprint 1 Başlangıcı
 
 Günlük Özet: Sprint Planning toplantısı tamamlandı. GitHub organizasyonu kuruldu ve repository oluşturuldu. Takım rolleri netleştirildi, Sprint 1 hedefleri belirlendi.
