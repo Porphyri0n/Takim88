@@ -20,6 +20,7 @@
 <p align="left">
   <img src="https://github.com/Porphyri0n/Takim88/blob/main/Assets/cutisAI-logo.png" alt="DermaCheck Logo" width="200">
 </p>
+
 ---
 
 ## 🧑‍💻 Takım Elemanları
