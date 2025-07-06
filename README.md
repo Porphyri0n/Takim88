@@ -207,17 +207,9 @@ Günlük Özet: Sprint 1 deliverables %95 hazır durumda. Final README review ya
 
 #### 🖼️ Mevcut İlerleme Görüntüleri
 
-**1. Dataset Ön İşleme Dashboard**
-![Dataset Dashboard](https://placeholder-link.com/dataset-dashboard.png)
+**1. Web Arayüzü Mockup**
+![Web UI Mockup](https://github.com/Porphyri0n/Takim88/blob/main/Assets/dermacheck-frontend-mockup.png)
 
-**2. Model Eğitim Pipeline**
-![Model Training](https://placeholder-link.com/model-training.png)
-
-**3. Web Arayüzü Mockup**
-![Web UI Mockup](https://placeholder-link.com/web-mockup.png)
-
-**4. Sprint Board Durumu**
-![Sprint Board](https://placeholder-link.com/sprint-board.png)
 
 ---
 
@@ -460,20 +452,20 @@ SOFTWARE.
 ### 👥 Takım İletişim
 
 - **Scrum Master:** Erdoğan Başer
-  - 📧 Email: erdogan.baser@cutisai.com
-  - 🐱 GitHub: [@erdogan-baser](https://github.com/erdogan-baser)
+  - 📧 Email: eb.baser@gmail.com
+  - 🐱 GitHub: [@erdogan-baser](https://github.com/Porphyri0n)
 
 - **ML Developer:** Emir Ayyıldız
-  - 📧 Email: emir.ayyildiz@cutisai.com
-  - 🐱 GitHub: [@emir-ayyildiz](https://github.com/emir-ayyildiz)
+  - 📧 Email: emirayyildiz164@gmail.com
+  - 🐱 GitHub: [@emir-ayyildiz](https://github.com/emirayyildiz1)
 
 - **Backend Developer:** Eminenur Yıldız
-  - 📧 Email: eminenur.yildiz@cutisai.com
-  - 🐱 GitHub: [@eminenur-yildiz](https://github.com/eminenur-yildiz)
+  - 📧 Email: weminenur@gmail.com
+  - 🐱 GitHub: [@eminenur-yildiz](https://github.com/weminemi)
 
 - **Backend Developer:** Gizem Erpek
-  - 📧 Email: gizem.erpek@cutisai.com
-  - 🐱 GitHub: [@gizem-erpek](https://github.com/gizem-erpek)
+  - 📧 Email: gizemerpek05@gmail.com
+  - 🐱 GitHub: [@gizem-erpek](https://github.com/gizemerpek)
 
 ### 🏢 Proje İletişim
 
