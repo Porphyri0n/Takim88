@@ -7,7 +7,7 @@
 [![TensorFlow](https://img.shields.io/badge/tensorflow-2.x-orange)](https://tensorflow.org)
 
 <p align="center">
-  <img src="https://placeholder-link.com/dermacheck-logo.png" alt="DermaCheck Logo" width="200">
+  <img src="https://github.com/Porphyri0n/Takim88/blob/main/Assets/dermacheck-logo.png" alt="DermaCheck Logo" width="200">
 </p>
 
 ## 👥 Takım İsmi
