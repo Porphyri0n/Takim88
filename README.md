@@ -134,30 +134,31 @@ DermaCheck, kullanıcıların yüklediği cilt görüntülerini yapay zekâ yard
 ---
 
 ### 🗣️ Daily Scrum
-
-#### 📅 Son Daily Scrum - 2 Temmuz 2024
-
-**Katılımcılar:** Erdoğan Başer, Emir Ayyıldız, Eminenur Yıldız, Gizem Erpek
-
-**Erdoğan Başer (Scrum Master)**
-- ✅ **Dün:** GitHub repository yapısı ve README dokümantasyonu tamamlandı
-- 🎯 **Bugün:** Takım koordinasyonu ve Sprint 2 planlaması yapılacak
-- 🚫 **Engel:** Yok
-
-**Emir Ayyıldız (ML Developer)**
-- ✅ **Dün:** ML teknolojileri araştırması tamamlandı
-- 🎯 **Bugün:** Geliştirme ortamı kurulumu başlanacak
-- 🚫 **Engel:** Yok
-
-**Eminenur Yıldız (ML/Backend Developer)**
-- ✅ **Dün:** Proje gereksinimleri analizi yapıldı
-- 🎯 **Bugün:** Backend teknoloji seçimi sonuçlandırılacak
-- 🚫 **Engel:** Yok
-
-**Gizem Erpek (Backend Developer)**
-- ✅ **Dün:** API yapısı tasarımı başlandı
-- 🎯 **Bugün:** Proje klasör yapısı oluşturulacak
-- 🚫 **Engel:** Yok
+🗣️ Daily Scrum
+📅 20 Haziran 2024 - Sprint 1 Başlangıcı
+Günlük Özet: Sprint Planning toplantısı tamamlandı. GitHub organizasyonu kuruldu ve repository oluşturuldu. Takım rolleri netleştirildi, Sprint 1 hedefleri belirlendi.
+📅 21 Haziran 2024
+Günlük Özet: README template hazırlandı ve branch stratejisi belirlendi. ML framework araştırmaları başladı. API tasarım prensipleri üzerinde çalışılmaya başlandı.
+📅 24 Haziran 2024
+Günlük Özet: Project board kurulumu tamamlandı. CNN mimarileri ve transfer learning yaklaşımları araştırıldı. Database schema tasarımına başlandı.
+📅 25 Haziran 2024
+Günlük Özet: Sprint tracking sistemi kuruldu. Model validation stratejileri incelendi. File upload stratejisi tasarlandı. Database normalization konusunda ek araştırma gerektiği belirlendi.
+📅 26 Haziran 2024
+Günlük Özet: Code review guidelines yazıldı. Model deployment stratejileri araştırıldı. Async processing patterns üzerinde çalışıldı. Takım içi yardımlaşma güçlendi.
+📅 27 Haziran 2024
+Günlük Özet: CI/CD pipeline tasarımı yapıldı. Model versioning stratejileri belirlendi. Caching strategies araştırıldı. API documentation tools incelendi.
+📅 28 Haziran 2024
+Günlük Özet: GitHub Actions workflow template hazırlandı. Sprint 1 mid-point review yapıldı - %60 ilerleme kaydedildi. Development environment setup guide yazılmaya başlandı.
+📅 1 Temmuz 2024
+Günlük Özet: README dokümantasyonu genişletildi. Local development environment kurulumları test edildi. Docker port conflict sorunu çözüldü. Environment variables strategy belirlendi.
+📅 2 Temmuz 2024
+Günlük Özet: Sprint Review hazırlıkları başladı. Development workflow dokümantasyonu tamamlandı. Logging configuration araştırıldı. Project folder structure finalize edildi.
+📅 3 Temmuz 2024
+Günlük Özet: Sprint 2 backlog hazırlığına başlandı. ML tasks breakdown yapıldı. Performance monitoring tools araştırıldı. Backend roadmap hazırlandı.
+📅 4 Temmuz 2024
+Günlük Özet: Sprint 1 completion checklist gözden geçirildi. HAM10000 dataset indirme stratejisi planlandı. Backend milestones belirlendi. Database ERD finalize edildi.
+📅 5 Temmuz 2024
+Günlük Özet: Sprint 1 deliverables %95 hazır durumda. Final README review yapıldı. Sprint Review demo hazırlıkları tamamlandı. Sprint 1 retrospective notları hazırlandı.
 
 ---
 
