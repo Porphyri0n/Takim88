@@ -22,8 +22,8 @@
 |---|---|---|---|
 | **Scrum Master & ML Developer** | **Erdoğan Başer** | Proje koordinasyonu | ML model geliştirme, Frontend |
 | **ML Developer & Frontend** | **Emir Ayyıldız** | ML model optimizasyonu | Kullanıcı arayüzü |
-| **ML Developer & Backend** | **Eminenur Yıldız** | ML pipeline Backend | API geliştirme |
-| **ML Developer & Backend** | **Gizem Erpek** | - Veri işleme | Backend altyapı | 
+| **ML Developer & Backend** | **Eminenur Yıldız** | ML pipeline | API geliştirme |
+| **ML Developer & Backend** | **Gizem Erpek** | ML pipeline | Backend altyapı | 
 
 ---
 
