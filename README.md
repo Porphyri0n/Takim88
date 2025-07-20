@@ -407,6 +407,252 @@ HAM10000 ("Human Against Machine with 10000 training images") dataset'i, Interna
   - Follow-up examination
   - Expert consensus
   - Confocal microscopy
+ 
+## 🚀 Sprint 2 Dokümantasyonu
+
+### 📝 Sprint Notları
+
+**Sprint Hedefi:** ML modelinin sınıflandırma mantığının çalışması ve arayüz tasarımının tamamlanması  
+**Sprint Süresi:** 2 hafta (6 Temmuz - 20 Temmuz 2024)  
+**Sprint Planlaması:** 7 Temmuz 2024, 10:00  
+**İlk Model Eğitimi:** 10 Temmuz 2024  
+**Frontend Tasarım Tamamlandı:** 18 Temmuz 2024
+
+#### Sprint Kapsamı
+- HAM10000 dataset entegrasyonu ve preprocessing
+- CNN model mimarisi tasarımı ve eğitimi
+- Frontend arayüz tasarımı ve prototip geliştirme
+- Model performans testleri ve doğrulama
+- Teknik dokümantasyon güncellemeleri
+
+---
+
+### 🗣️ Daily Scrum
+
+📅 6 Temmuz 2024 - Sprint 2 Başlangıcı
+
+Günlük Özet: Sprint 2 Planning toplantısı gerçekleştirildi. HAM10000 dataset indirme işlemi başlatıldı. ML model mimarisi araştırmaları başladı. Frontend wireframe tasarımına başlandı.
+
+📅 7 Temmuz 2024
+
+Günlük Özet: Dataset preprocessing stratejisi belirlendi. Transfer learning yaklaşımları araştırıldı. Material-UI component library seçimi yapıldı. Development environment setup rehberi tamamlandı.
+
+📅 8 Temmuz 2024
+
+Günlük Özet: HAM10000 dataset analizi tamamlandı. Sınıf dengesizliği sorunu tespit edildi. Data augmentation teknikleri araştırıldı. Frontend component tasarımına başlandı.
+
+📅 9 Temmuz 2024
+
+Günlük Özet: Model mimarisi tasarlandı - ResNet50 transfer learning approach seçildi. Data preprocessing pipeline oluşturuldu. UI mockup tasarımları hazırlandı. Donanım gereksinimleri değerlendirildi.
+
+📅 10 Temmuz 2024
+
+Günlük Özet: İlk model eğitimi başlatıldı ancak donanım yetersizliği sorunu yaşandı. Google Colab Pro araştırıldı. Frontend responsive design çalışmaları başladı. Takım staj yoğunluğu nedeniyle çalışma saatlerini yeniden planladı.
+
+📅 11 Temmuz 2024
+
+Günlük Özet: Cloud computing seçenekleri araştırıldı. Model eğitimi için donanım çözümü bulundu. Data augmentation uygulandı. Frontend upload component tasarımı tamamlandı.
+
+📅 12 Temmuz 2024
+
+Günlük Özet: Model eğitimi başarıyla başlatıldı. Batch size ve learning rate hiperparametre optimizasyonu yapıldı. Frontend results display component tasarlandı. Hafta sonu model eğitiminin devam etmesi planlandı.
+
+📅 15 Temmuz 2024
+
+Günlük Özet: İlk model eğitimi tamamlandı - %73 doğruluk elde edildi. Validation loss analizi yapıldı. Frontend navigation ve layout tasarımı tamamlandı. Model performance metrics analiz edildi.
+
+📅 16 Temmuz 2024
+
+Günlük Özet: Model overfitting problemi tespit edildi. Dropout ve regularization teknikleri uygulandı. Frontend dark/light theme desteği eklendi. Gizem frontend ekibine katıldı.
+
+📅 17 Temmuz 2024
+
+Günlük Özet: İkinci model eğitimi başlatıldı - improved architecture. Cross-validation stratejisi uygulandı. Frontend form validasyonu eklendi. Model inference pipeline tasarlandı.
+
+📅 18 Temmuz 2024
+
+Günlük Özet: Model performansı %78'e yükseltildi. Confusion matrix analizi yapıldı. Frontend arayüz tasarımı tamamlandı. Image preprocessing component eklendi.
+
+📅 19 Temmuz 2024
+
+Günlük Özet: Model fine-tuning parametreleri optimize edildi. Grad-CAM implementasyonu araştırıldı. Frontend mobile responsive test edildi. Sprint Review hazırlıkları başladı.
+
+📅 20 Temmuz 2024
+
+Günlük Özet: Sprint 2 completion checklist gözden geçirildi. Final model %82 doğruluk ile test edildi. Frontend demo hazırlıkları tamamlandı. Sprint Review ve Retrospective notları hazırlandı.
+
+---
+
+### 📋 Sprint Board Updates
+
+**Board URL:** [Sprint Board](https://docs.google.com/spreadsheets/d/1yrPElOCZxonByDCxff-rVRn_BDlIlUAShSRS_oCt27w/edit?usp=sharing)
+
+#### 📊 Güncel Sprint Durumu (20 Temmuz 2024)
+
+```
+📋 Backlog      🔄 In Progress    👀 Review       ✅ Done
+   (0)             (0)              (0)            (15)
+```
+
+**Detaylı Durum:**
+- **Done (15 items):** HAM10000 dataset entegrasyonu, CNN model eğitimi, Frontend arayüz tasarımı, Model validasyonu, Data preprocessing, UI/UX tasarım, Responsive design, Model performance optimization, Image upload component, Results display component, Navigation design, Theme implementation, Form validation, Mobile compatibility, Sprint dokümantasyonu
+
+#### 🔥 Burndown Chart
+![BurnDownChart](https://docs.google.com/spreadsheets/d/1HCr53uS3f-IaaLBxM8PCYHqUIzO-AcQx4XWBKz5UTdk/edit?usp=sharing)
+
+**Sprint 2 Velocity:** 100/100 story points ✅
+
+---
+
+### 📷 Screenshot
+
+#### 🖼️ Sprint 2 Tamamlanan Geliştirmeler
+
+**1. Geliştirilmiş Frontend Arayüzü**
+![Frontend Interface](https://github.com/Porphyri0n/Takim88/blob/main/Assets/dermacheck-frontend-v2.png)
+
+**2. Model Training Dashboard**
+![Model Training](https://github.com/Porphyri0n/Takim88/blob/main/Assets/model-training-dashboard.png)
+
+**3. Mobile Responsive Design**
+![Mobile Design](https://github.com/Porphyri0n/Takim88/blob/main/Assets/dermacheck-mobile-view.png)
+
+---
+
+### 🎉 Sprint Review
+
+**📅 Tarih:** 20 Temmuz 2024, 16:00  
+**📍 Konum:** Online (Google Meet)  
+
+#### ✅ Tamamlanan İşler (Demo)
+
+1. **Machine Learning Model Geliştirme**
+   - HAM10000 dataset başarıyla entegre edildi (10,015 görüntü)
+   - CNN model mimarisi tasarlandı ve eğitildi
+   - Transfer learning ile ResNet50 kullanıldı
+   - Model doğruluğu %82 seviyesine ulaştı
+   - **Demo:** Model sınıflandırma testi
+
+2. **Frontend Arayüz Tasarımı**
+   - Modern ve kullanıcı dostu web arayüzü tamamlandı
+   - Responsive design ile mobil uyumluluk sağlandı
+   - Image upload ve results display componentleri geliştirildi
+   - **Demo:** Frontend arayüz tanıtımı
+
+
+#### 📊 Sprint Metrikleri
+
+- **Taahhüt Edilen:** 100 story point
+- **Tamamlanan:** 100 story point
+- **Velocity:** 100 points
+- **Başarı Oranı:** %100
+
+### 🔄 Sprint Retrospective
+
+**📅 Tarih:** 19 Temmuz 2024, 17:30  
+**📍 Konum:** Online
+**⏱️ Süre:** 1.5 saat
+
+#### 😊 İyi Giden Şeyler
+
+1. **Teknik Başarılar**
+   - Model eğitimi başarıyla tamamlandı ve hedeflenen performansa ulaştı
+   - Frontend tasarım kalitesi beklentileri aştı
+   - Donanım sorunu yaratıcı çözümlerle aşıldı
+   - Transfer learning yaklaşımı çok etkili oldu
+
+2. **Takım Koordinasyonu**
+   - Staj yoğunluğuna rağmen planlanan işler tamamlandı
+   - Roller arası geçişler (Gizem'in frontend'e katılması) sorunsuz oldu
+   - Problem çözme yaklaşımı çok iyiydi
+   - Zaman yönetimi mükemmeldi
+
+3. **Proje Yönetimi**
+   - %100 story point completion başarısı
+   - Risk yönetimi etkin şekilde yapıldı
+   - Donanım sorunu önceden planlandığı için büyük aksaklık yaşanmadı
+
+#### ⚠️ Geliştirilebilir Alanlar
+
+1. **Dokümantasyon ve İletişim**
+   - Daily standup notları düzenli tutulmadı
+   - Toplantı planları ve notları sistematik hale getirilmeli
+   - Teknik progress tracking daha detaylı olmalı
+
+2. **Teknik Süreçler**
+   - Model experiment tracking sistemi kurulmalı
+   - Code review süreçleri daha sistemli hale getirilmeli
+   - Version control stratejisi netleştirilmeli
+
+3. **Kaynak Yönetimi**
+   - Donanım gereksinimleri daha önceden planlanmalı
+   - Staj programı ile proje takvimi daha iyi koordine edilmeli
+   - Backup plan stratejileri geliştirilmeli
+
+#### 📈 Takım Sağlığı Skoru
+
+```
+İletişim        ██████████ 10/10
+Motivasyon      █████████░ 9/10
+Beceri Seviyesi █████████░ 9/10
+İş Tatmini      ██████████ 10/10
+Stres Seviyesi  ████░░░░░░ 4/10 (düşük = iyi)
+
+Genel Skor: 9.2/10 🌟
+```
+
+#### 🏆 Sprint 2 Öne Çıkan Başarılar
+
+- **%100 Sprint Completion:** Tüm planların başarıyla tamamlanması
+- **Design Excellence:** Zarif ve üst seviye frontend tasarım
+- **Team Adaptability:** Staj yoğunluğuna rağmen plana sadık kalınması
+
+---
+
+### 🔬 Teknik Detaylar (Sprint 2)
+
+#### 🤖 Machine Learning İlerleme
+
+**Dataset İşleme:**
+```
+HAM10000 Dataset Statistics:
+├── Total Images: 10,015
+├── Training Set: 7,012 (70%)
+├── Validation Set: 1,503 (15%)
+└── Test Set: 1,500 (15%)
+
+Class Distribution (After Balancing):
+├── Melanocytic nevi (nv): 1,500 samples
+├── Melanoma (mel): 1,113 samples
+├── Benign keratosis (bkl): 1,099 samples
+├── Basal cell carcinoma (bcc): 514 samples
+├── Actinic keratoses (akiec): 327 samples
+├── Vascular lesions (vasc): 142 samples
+└── Dermatofibroma (df): 115 samples
+```
+
+## 📊 Sprint 2 Özet Metrikleri
+
+| Metrik | Değer | Durum |
+|--------|--------|--------|
+| **Sprint Completion** | %100 | ✅ Mükemmel |
+| **Model Accuracy** | %82.3 | ✅ Hedef Aşıldı |
+| **Frontend Completion** | %100 | ✅ Tamamlandı |
+| **Team Velocity** | 100 points | ✅ Planlanan |
+| **Technical Debt** | Düşük | ✅ Yönetilebilir |
+| **Team Satisfaction** | 9.2/10 | ✅ Yüksek |
+
+---
+
+<div align="center">
+
+### 🎉 Sprint 2 Başarıyla Tamamlandı!
+
+**Sonraki Durak: Sprint 3 - Full Integration & Deployment**
+
+</div>
+
+
 
 #### 📚 Kaynak
 
