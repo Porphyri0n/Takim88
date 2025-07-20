@@ -1,0 +1,1130 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DermaCheck - AI Destekli Cilt Analizi Sistemi</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #3b82f6;
+            --secondary-color: #1e40af;
+            --accent-color: #ea580c;
+            --accent-light: #fb923c;
+            --success-color: #10b981;
+            --warning-color: var(--accent-color);
+            --danger-color: #ef4444;
+            --dark-bg: #0f172a;
+            --dark-secondary: #1e293b;
+            --dark-card: #334155;
+            --light-text: #f8fafc;
+            --gray-text: #cbd5e1;
+            --border-color: #475569;
+            --white: #ffffff;
+            --gradient: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            --accent-gradient: linear-gradient(135deg, var(--accent-color), var(--accent-light));
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+            --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.4);
+            --glow: 0 0 20px rgba(59, 130, 246, 0.3);
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--light-text);
+            background-color: var(--dark-bg);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        .header {
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: var(--shadow);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            color: var(--light-text);
+        }
+
+        .logo img {
+            width: 40px;
+            height: 40px;
+            object-fit: contain;
+            filter: brightness(1.1);
+        }
+
+        .logo-text {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-shadow: 0 0 10px rgba(59, 130, 246, 0.3);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--gray-text);
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-color);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent-gradient);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .mobile-menu {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .mobile-menu span {
+            width: 25px;
+            height: 3px;
+            background: var(--gray-text);
+            margin: 2px 0;
+            transition: 0.3s;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: var(--gradient);
+            color: var(--light-text);
+            padding: 120px 0 80px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><defs><radialGradient id="a" cx="50%" cy="50%"><stop offset="0%" stop-color="%23ffffff" stop-opacity="0.1"/><stop offset="100%" stop-color="%23ffffff" stop-opacity="0"/></radialGradient></defs><circle cx="200" cy="300" r="100" fill="url(%23a)"/><circle cx="800" cy="200" r="150" fill="url(%23a)"/><circle cx="600" cy="700" r="80" fill="url(%23a)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            animation: fadeInUp 0.8s ease;
+            text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            animation: fadeInUp 0.8s ease 0.2s both;
+        }
+
+        .cta-button {
+            background: var(--accent-gradient);
+            color: var(--white);
+            padding: 14px 32px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            animation: fadeInUp 0.8s ease 0.4s both;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-lg), var(--glow);
+        }
+
+        /* Upload Section */
+        .upload-section {
+            padding: 80px 0;
+            background: var(--dark-secondary);
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--light-text);
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.1rem;
+            color: var(--gray-text);
+            margin-bottom: 3rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .upload-container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .upload-area {
+            border: 3px dashed var(--primary-color);
+            border-radius: 20px;
+            padding: 60px 40px;
+            text-align: center;
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(30, 64, 175, 0.05));
+            transition: all 0.3s ease;
+            cursor: pointer;
+            backdrop-filter: blur(10px);
+        }
+
+        .upload-area:hover {
+            border-color: var(--accent-color);
+            background: linear-gradient(135deg, rgba(234, 88, 12, 0.1), rgba(59, 130, 246, 0.1));
+            box-shadow: var(--glow);
+        }
+
+        .upload-area.dragover {
+            border-color: var(--accent-color);
+            background: linear-gradient(135deg, rgba(234, 88, 12, 0.15), rgba(59, 130, 246, 0.1));
+            box-shadow: 0 0 30px rgba(234, 88, 12, 0.3);
+        }
+
+        .upload-icon {
+            font-size: 4rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            filter: drop-shadow(0 0 10px rgba(59, 130, 246, 0.3));
+        }
+
+        .upload-text {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--light-text);
+        }
+
+        .upload-subtext {
+            color: var(--gray-text);
+            margin-bottom: 2rem;
+        }
+
+        .file-input {
+            display: none;
+        }
+
+        .upload-button {
+            background: var(--accent-gradient);
+            color: var(--white);
+            padding: 12px 24px;
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow);
+        }
+
+        .upload-button:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        /* Analysis Section */
+        .analysis-section {
+            padding: 80px 0;
+            background: var(--dark-bg);
+        }
+
+        .analysis-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: start;
+        }
+
+        .image-preview, .results-panel {
+            background: var(--dark-card);
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: var(--shadow-lg);
+            border: 1px solid var(--border-color);
+        }
+
+        .image-preview {
+            text-align: center;
+        }
+
+        .image-preview h3, .results-panel h3 {
+            color: var(--light-text);
+            margin-bottom: 1.5rem;
+            font-size: 1.3rem;
+        }
+
+        .preview-image {
+            max-width: 100%;
+            max-height: 300px;
+            border-radius: 12px;
+            margin-bottom: 1rem;
+            border: 2px solid var(--border-color);
+        }
+
+        .result-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .result-item:last-child {
+            border-bottom: none;
+        }
+
+        .result-label {
+            font-weight: 600;
+            color: var(--light-text);
+        }
+
+        .result-confidence {
+            font-weight: 700;
+            color: var(--accent-color);
+        }
+
+        .confidence-bar {
+            width: 100%;
+            height: 8px;
+            background: var(--border-color);
+            border-radius: 4px;
+            margin-top: 0.5rem;
+            overflow: hidden;
+        }
+
+        .confidence-fill {
+            height: 100%;
+            background: var(--accent-gradient);
+            border-radius: 4px;
+            transition: width 0.8s ease;
+            box-shadow: 0 0 10px rgba(234, 88, 12, 0.3);
+        }
+
+        /* Warning Section */
+        .warning-section {
+            background: linear-gradient(135deg, rgba(234, 88, 12, 0.1), rgba(251, 146, 60, 0.05));
+            padding: 2rem;
+            border-radius: 20px;
+            margin: 2rem 0;
+            border-left: 5px solid var(--accent-color);
+            border: 1px solid rgba(234, 88, 12, 0.2);
+            backdrop-filter: blur(10px);
+        }
+
+        .warning-title {
+            color: var(--accent-color);
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .warning-text {
+            color: var(--gray-text);
+            line-height: 1.6;
+        }
+
+        /* Features Section */
+        .features-section {
+            padding: 80px 0;
+            background: var(--dark-secondary);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .feature-card {
+            background: var(--dark-card);
+            padding: 2rem;
+            border-radius: 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 1px solid var(--border-color);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--accent-gradient);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg), var(--glow);
+        }
+
+        .feature-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            filter: drop-shadow(0 0 10px rgba(59, 130, 246, 0.3));
+        }
+
+        .feature-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--light-text);
+        }
+
+        .feature-description {
+            color: var(--gray-text);
+            line-height: 1.6;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--dark-bg);
+            color: var(--light-text);
+            padding: 4rem 0 1rem;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 1rem;
+            color: var(--light-text);
+            font-size: 1.2rem;
+        }
+
+        .footer-section p,
+        .footer-section a {
+            color: var(--gray-text);
+            text-decoration: none;
+            line-height: 1.8;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: var(--accent-color);
+        }
+
+        .company-info {
+            text-align: center;
+            margin-bottom: 2rem;
+            padding: 2rem;
+            background: var(--dark-card);
+            border-radius: 20px;
+            border: 1px solid var(--border-color);
+        }
+
+        .company-logo {
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+            margin-bottom: 1rem;
+            filter: brightness(1.1);
+        }
+
+        .company-name {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .team-member {
+            background: var(--dark-secondary);
+            padding: 1.5rem;
+            border-radius: 15px;
+            text-align: center;
+            border: 1px solid var(--border-color);
+            transition: all 0.3s ease;
+        }
+
+        .team-member:hover {
+            transform: translateY(-2px);
+            border-color: var(--accent-color);
+        }
+
+        .team-member-name {
+            font-weight: 700;
+            color: var(--light-text);
+            margin-bottom: 0.5rem;
+        }
+
+        .team-member-role {
+            color: var(--accent-color);
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid var(--border-color);
+            padding-top: 2rem;
+            text-align: center;
+            color: var(--gray-text);
+        }
+
+        .footer-bottom p {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Loading Animation */
+        .loading {
+            display: none;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .spinner {
+            width: 50px;
+            height: 50px;
+            border: 5px solid var(--border-color);
+            border-top: 5px solid var(--accent-color);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 1rem;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes glow {
+            0%, 100% { box-shadow: 0 0 5px rgba(59, 130, 246, 0.3); }
+            50% { box-shadow: 0 0 20px rgba(59, 130, 246, 0.6); }
+        }
+
+        /* Hidden sections initially */
+        .analysis-section,
+        .warning-section {
+            display: none;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: rgba(15, 23, 42, 0.98);
+                flex-direction: column;
+                padding: 1rem;
+                border-top: 1px solid var(--border-color);
+            }
+
+            .nav-links.show {
+                display: flex;
+            }
+
+            .mobile-menu {
+                display: flex;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .upload-area {
+                padding: 40px 20px;
+            }
+
+            .upload-icon {
+                font-size: 3rem;
+            }
+
+            .analysis-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .team-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .container {
+                padding: 0 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero {
+                padding: 100px 0 60px;
+            }
+
+            .upload-section,
+            .analysis-section,
+            .features-section {
+                padding: 60px 0;
+            }
+
+            .upload-area {
+                padding: 30px 15px;
+            }
+
+            .results-panel,
+            .image-preview {
+                padding: 1.5rem;
+            }
+
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="#" class="logo">
+                    <img src="Assets/dermacheck-logo.png" alt="DermaCheck Logo">
+                    <span class="logo-text">DermaCheck</span>
+                </a>
+                <ul class="nav-links">
+                    <li><a href="#anasayfa">Ana Sayfa</a></li>
+                    <li><a href="#analiz">Analiz</a></li>
+                    <li><a href="#ozellikler">Özellikler</a></li>
+                    <li><a href="#hakkinda">Hakkında</a></li>
+                    <li><a href="#iletisim">İletişim</a></li>
+                </ul>
+                <div class="mobile-menu" id="mobileMenuBtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="anasayfa" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>AI Destekli Cilt Analizi</h1>
+                <p>Yapay zeka teknolojisi ile cilt sağlığınızı kontrol edin. Hızlı, güvenilir ve profesyonel ön değerlendirme sistemi.</p>
+                <a href="#analiz" class="cta-button">
+                    <i class="fas fa-microscope"></i> Analizi Başlat
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Upload Section -->
+    <section id="analiz" class="upload-section">
+        <div class="container">
+            <h2 class="section-title">Cilt Görüntüsü Analizi</h2>
+            <p class="section-subtitle">
+                Cilt üzerindeki lezyonun fotoğrafını yükleyerek AI destekli analiz başlatabilirsiniz
+            </p>
+
+            <div class="upload-container">
+                <div class="upload-area" id="uploadArea">
+                    <i class="fas fa-cloud-upload-alt upload-icon"></i>
+                    <div class="upload-text">Görüntü Yükle</div>
+                    <div class="upload-subtext">Dosyayı buraya sürükleyip bırakın veya seçmek için tıklayın</div>
+                    <button class="upload-button" onclick="document.getElementById('fileInput').click()">
+                        <i class="fas fa-plus"></i> Dosya Seç
+                    </button>
+                    <input type="file" id="fileInput" class="file-input" accept="image/*">
+                </div>
+
+                <div class="loading" id="loadingSpinner">
+                    <div class="spinner"></div>
+                    <p>Görüntü analiz ediliyor...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Warning Section -->
+    <section class="warning-section" id="warningSection">
+        <div class="container">
+            <div class="warning-title">
+                <i class="fas fa-exclamation-triangle"></i>
+                Önemli Uyarı
+            </div>
+            <p class="warning-text">
+                <strong>DermaCheck bir tanı aracı değildir.</strong> Sunulan sonuçlar yalnızca bilgilendirme ve yönlendirme amaçlıdır. 
+                Nihai teşhis ve tedavi planlaması yalnızca uzman hekimler tarafından yapılmalıdır. 
+                Şüpheli durumlar için mutlaka bir dermatoloğa başvurunuz.
+            </p>
+        </div>
+    </section>
+
+    <!-- Analysis Results Section -->
+    <section class="analysis-section" id="analysisSection">
+        <div class="container">
+            <h2 class="section-title">Analiz Sonuçları</h2>
+            
+            <div class="analysis-container">
+                <div class="image-preview">
+                    <h3>Yüklenen Görüntü</h3>
+                    <img id="previewImage" class="preview-image" alt="Yüklenen görüntü">
+                </div>
+
+                <div class="results-panel">
+                    <h3>AI Değerlendirmesi</h3>
+                    <div id="resultsContainer">
+                        <!-- Results will be populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="ozellikler" class="features-section">
+        <div class="container">
+            <h2 class="section-title">Özellikler</h2>
+            <p class="section-subtitle">
+                DermaCheck'in sunduğu gelişmiş özellikler ile cilt sağlığınızı takip edin
+            </p>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i class="fas fa-brain feature-icon"></i>
+                    <h3 class="feature-title">AI Destekli Analiz</h3>
+                    <p class="feature-description">
+                        10,000+ dermoskopik görüntü ile eğitilmiş yapay zeka modeli ile %82+ doğruluk oranında analiz
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <i class="fas fa-mobile-alt feature-icon"></i>
+                    <h3 class="feature-title">Mobil Uyumlu</h3>
+                    <p class="feature-description">
+                        Tüm cihazlarda mükemmel çalışan responsive tasarım ile her yerden erişim imkanı
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <i class="fas fa-shield-alt feature-icon"></i>
+                    <h3 class="feature-title">Güvenli ve Gizli</h3>
+                    <p class="feature-description">
+                        Verileriniz güvenle işlenir, kişisel bilgileriniz korunur ve gizliliğiniz ön planda tutulur
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <i class="fas fa-clock feature-icon"></i>
+                    <h3 class="feature-title">Hızlı Sonuç</h3>
+                    <p class="feature-description">
+                        Görüntü yükleme sonrası saniyeler içinde detaylı analiz sonuçlarını görüntüleyebilirsiniz
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <i class="fas fa-list-ul feature-icon"></i>
+                    <h3 class="feature-title">7 Sınıf Analizi</h3>
+                    <p class="feature-description">
+                        Melanom, bazal hücreli karsinom, benign keratozis ve 4 farklı lezyon tipinin analizi
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <i class="fas fa-user-md feature-icon"></i>
+                    <h3 class="feature-title">Geliştirilebilir Altyapı</h3>
+                    <p class="feature-description">
+                        Eklemeyi planladığımız yeni özellikler ve lezyon tipleri ile sürekli gelişen bir platform.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <!-- Company Info -->
+            <div class="company-info">
+                <img src="Assets/cutisAI-logo.png" alt="CutisAI Logo" class="company-logo">
+                <h3 class="company-name">CutisAI</h3>
+                <p>AI destekli cilt analizi sistemi ile cilt sağlığınızı takip edin. Erken farkındalık, daha sağlıklı bir gelecek demektir.</p>
+                
+                <!-- Team Members -->
+                <div class="team-grid">
+                    <div class="team-member">
+                        <div class="team-member-name">Erdoğan Başer</div>
+                        <div class="team-member-role">Scrum Master & ML Developer</div>
+                    </div>
+                    <div class="team-member">
+                        <div class="team-member-name">Emir Ayyıldız</div>
+                        <div class="team-member-role">ML Developer & Frontend</div>
+                    </div>
+                    <div class="team-member">
+                        <div class="team-member-name">Eminenur Yıldız</div>
+                        <div class="team-member-role">ML Developer & Backend</div>
+                    </div>
+                    <div class="team-member">
+                        <div class="team-member-name">Gizem Erpek</div>
+                        <div class="team-member-role">ML Developer & Backend</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>DermaCheck</h3>
+                    <p>Yapay zeka teknolojisi ile güçlendirilmiş cilt analizi platformu</p>
+                    <p>Yapay zeka ve Teknolojisi Akademisi'ne sevgilerimizi sunarız.</p>
+                    <p><i class="fab fa-github"></i> <a href="https://github.com/Porphyri0n/Takim88">github.com/Takım88</a></p>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Hızlı Linkler</h3>
+                    <p><a href="#anasayfa">Ana Sayfa</a></p>
+                    <p><a href="#analiz">Analiz</a></p>
+                    <p><a href="#ozellikler">Özellikler</a></p>
+                    <p><a href="#hakkinda">Hakkında</a></p>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Teknoloji</h3>
+                    <p>TensorFlow & Deep Learning</p>
+                    <p>HAM10000 Dataset</p>
+                    <p>CNN & Transfer Learning</p>
+                    <p>React.js & Flask API</p>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Destek</h3>
+                    <p><a href="https://github.com/Porphyri0n/Takim88/tree/main?tab=MIT-1-ov-file">Lisans</a></p>
+                    <p><a href="https://github.com/Porphyri0n/Takim88/blob/main/README.md">Dökümantasyon</a></p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 DermaCheck - CutisAI Team. Tüm hakları saklıdır.</p>
+                <p><strong>Geliştiren Ekip:</strong> Erdoğan Başer, Emir Ayyıldız, Eminenur Yıldız, Gizem Erpek</p>
+                <p>MIT Lisansı | Açık Kaynak Proje</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // File upload handling
+        const uploadArea = document.getElementById('uploadArea');
+        const fileInput = document.getElementById('fileInput');
+        const loadingSpinner = document.getElementById('loadingSpinner');
+        const analysisSection = document.getElementById('analysisSection');
+        const warningSection = document.getElementById('warningSection');
+        const previewImage = document.getElementById('previewImage');
+        const resultsContainer = document.getElementById('resultsContainer');
+
+        // Sample skin lesion types in Turkish
+        const lesionTypes = [
+            { name: 'Melanositik Nevüs (Ben)', risk: 'düşük' },
+            { name: 'Melanom', risk: 'yüksek' },
+            { name: 'Benign Keratozis', risk: 'düşük' },
+            { name: 'Bazal Hücreli Karsinom', risk: 'orta' },
+            { name: 'Aktinik Keratozis', risk: 'orta' },
+            { name: 'Vasküler Lezyon', risk: 'düşük' },
+            { name: 'Dermatofibrom', risk: 'düşük' }
+        ];
+
+        // Mobile menu functionality
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navLinks = document.querySelector('.nav-links');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('show');
+        });
+
+        // Drag and drop functionality
+        uploadArea.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            uploadArea.classList.add('dragover');
+        });
+
+        uploadArea.addEventListener('dragleave', () => {
+            uploadArea.classList.remove('dragover');
+        });
+
+        uploadArea.addEventListener('drop', (e) => {
+            e.preventDefault();
+            uploadArea.classList.remove('dragover');
+            const files = e.dataTransfer.files;
+            if (files.length > 0) {
+                handleFileUpload(files[0]);
+            }
+        });
+
+        uploadArea.addEventListener('click', () => {
+            fileInput.click();
+        });
+
+        fileInput.addEventListener('change', (e) => {
+            if (e.target.files.length > 0) {
+                handleFileUpload(e.target.files[0]);
+            }
+        });
+
+        function handleFileUpload(file) {
+            if (!file.type.startsWith('image/')) {
+                alert('Lütfen geçerli bir görüntü dosyası seçin.');
+                return;
+            }
+
+            // Show loading
+            loadingSpinner.style.display = 'block';
+            uploadArea.style.display = 'none';
+
+            // Simulate analysis delay
+            setTimeout(() => {
+                analyzeImage(file);
+            }, 3000);
+        }
+
+        function analyzeImage(file) {
+            // Create file URL for preview
+            const fileURL = URL.createObjectURL(file);
+            previewImage.src = fileURL;
+
+            // Hide loading
+            loadingSpinner.style.display = 'none';
+            
+            // Show sections
+            warningSection.style.display = 'block';
+            analysisSection.style.display = 'block';
+
+            // Generate mock results
+            generateResults();
+
+            // Scroll to results
+            analysisSection.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function generateResults() {
+            // Simulate AI analysis results
+            const shuffled = [...lesionTypes].sort(() => 0.5 - Math.random());
+            let remainingConfidence = 100;
+            
+            resultsContainer.innerHTML = '';
+
+            shuffled.forEach((lesion, index) => {
+                const confidence = index === shuffled.length - 1 
+                    ? remainingConfidence 
+                    : Math.floor(Math.random() * (remainingConfidence / 2)) + (index === 0 ? 40 : 5);
+                
+                remainingConfidence -= confidence;
+                
+                if (confidence <= 0) return;
+
+                const resultItem = document.createElement('div');
+                resultItem.className = 'result-item';
+                
+                const riskColor = lesion.risk === 'yüksek' ? '#ef4444' : 
+                                 lesion.risk === 'orta' ? '#ea580c' : '#10b981';
+
+                resultItem.innerHTML = `
+                    <div>
+                        <div class="result-label">${lesion.name}</div>
+                        <div class="confidence-bar">
+                            <div class="confidence-fill" style="width: ${confidence}%; background: linear-gradient(90deg, ${riskColor}, ${riskColor}aa)"></div>
+                        </div>
+                    </div>
+                    <div class="result-confidence">${confidence}%</div>
+                `;
+
+                resultsContainer.appendChild(resultItem);
+            });
+
+            // Add recommendation
+            const highestResult = shuffled[0];
+            const recommendation = document.createElement('div');
+            recommendation.style.marginTop = '2rem';
+            recommendation.style.padding = '1.5rem';
+            recommendation.style.borderRadius = '15px';
+            recommendation.style.backgroundColor = highestResult.risk === 'yüksek' ? 'rgba(239, 68, 68, 0.1)' : 'rgba(16, 185, 129, 0.1)';
+            recommendation.style.border = `1px solid ${highestResult.risk === 'yüksek' ? 'rgba(239, 68, 68, 0.3)' : 'rgba(16, 185, 129, 0.3)'}`;
+            
+            const recommendationText = highestResult.risk === 'yüksek' 
+                ? '⚠️ <strong>Önemli:</strong> Analiz sonuçlarına göre bir dermatoloğa başvurmanız önerilmektedir.'
+                : '✅ <strong>Bilgi:</strong> Sonuçlar normal aralıkta görünmektedir, ancak düzenli kontroller önemlidir.';
+            
+            recommendation.innerHTML = recommendationText;
+            recommendation.style.color = 'var(--light-text)';
+            resultsContainer.appendChild(recommendation);
+        }
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    // Close mobile menu if open
+                    navLinks.classList.remove('show');
+                }
+            });
+        });
+
+        // Add entrance animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe sections for animation
+        document.querySelectorAll('.feature-card, .team-member').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(card);
+        });
+
+        // Add subtle glow animation to upload area
+        setInterval(() => {
+            if (uploadArea.style.display !== 'none') {
+                uploadArea.style.animation = 'glow 2s ease-in-out';
+                setTimeout(() => {
+                    uploadArea.style.animation = '';
+                }, 2000);
+            }
+        }, 10000);
+    </script>
+</body>
+</html>
