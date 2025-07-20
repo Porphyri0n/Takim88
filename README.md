@@ -197,7 +197,7 @@ Günlük Özet: Sprint 1 deliverables %95 hazır durumda. Final README review ya
 - **Done (2 item):** Sprint planlama, Takım organizasyonu
 
 #### 🔥 Burndown Chart
-![BurnDownChart](https://docs.google.com/spreadsheets/d/1HCr53uS3f-IaaLBxM8PCYHqUIzO-AcQx4XWBKz5UTdk/edit?usp=sharing)
+![BurnDownChart](https://docs.google.com/spreadsheets/d/1slRiE7KsxFyPxS30SDdtpb28tGOD9MChEr4Q9-Zs0BI/edit?usp=sharing)
 
 
 ---
@@ -498,7 +498,7 @@ Günlük Özet: Sprint 2 completion checklist gözden geçirildi. Final model %8
 - **Done (15 items):** HAM10000 dataset entegrasyonu, CNN model eğitimi, Frontend arayüz tasarımı, Model validasyonu, Data preprocessing, UI/UX tasarım, Responsive design, Model performance optimization, Image upload component, Results display component, Navigation design, Theme implementation, Form validation, Mobile compatibility, Sprint dokümantasyonu
 
 #### 🔥 Burndown Chart
-![BurnDownChart](https://docs.google.com/spreadsheets/d/1HCr53uS3f-IaaLBxM8PCYHqUIzO-AcQx4XWBKz5UTdk/edit?usp=sharing)
+![BurnDownChart](https://docs.google.com/spreadsheets/d/1slRiE7KsxFyPxS30SDdtpb28tGOD9MChEr4Q9-Zs0BI/edit?usp=sharing)
 
 **Sprint 2 Velocity:** 100/100 story points ✅
 
