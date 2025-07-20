@@ -216,7 +216,7 @@ Günlük Özet: Sprint 1 deliverables %95 hazır durumda. Final README review ya
 
 **📅 Tarih:** 6 Temmuz 2024, 14:00  
 **📍 Konum:** Online (Google Meet)  
-**👥 Katılımcılar:** Tüm takım + Product Owner + Stakeholders
+**👥 Katılımcılar:** Tüm takım
 
 #### ✅ Tamamlanan İşler (Demo)
 
