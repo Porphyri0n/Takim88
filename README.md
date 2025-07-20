@@ -508,13 +508,21 @@ Günlük Özet: Sprint 2 completion checklist gözden geçirildi. Final model %8
 
 #### 🖼️ Sprint 2 Tamamlanan Geliştirmeler
 
+
+---
+
 **1. Geliştirilmiş Frontend Arayüzü**
 ![Front End Screenshot 1](https://github.com/Porphyri0n/Takim88/blob/main/Assets/frontend_SS1.png)
 ![Front End Screenshot 2](https://github.com/Porphyri0n/Takim88/blob/main/Assets/frontend_SS2.png)
 
+
+---
+
 **2. Model Training Dashboard**
 ![Model Training](https://github.com/Porphyri0n/Takim88/blob/main/Assets/model-training-dashboard.jpg)
 
+
+---
 **3. Mobile Responsive Design**
 ![Mobile Design](https://github.com/Porphyri0n/Takim88/blob/main/Assets/frontend_SS3.png)
 
