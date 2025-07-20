@@ -239,7 +239,7 @@ Günlük Özet: Sprint 1 deliverables %95 hazır durumda. Final README review ya
    - **Demo:** Teknoloji stack sunumu
 
 #### 📊 Sprint Metrikleri
-
+(Her Sprint için 20 puan planı yapıldı)
 - **Taahhüt Edilen:** 20 story point
 - **Tamamlanan:** 18 story point
 - **Velocity:** 18 points
@@ -551,9 +551,9 @@ Günlük Özet: Sprint 2 completion checklist gözden geçirildi. Final model %8
 
 #### 📊 Sprint Metrikleri
 
-- **Taahhüt Edilen:** 100 story point
-- **Tamamlanan:** 100 story point
-- **Velocity:** 100 points
+- **Taahhüt Edilen:** 20 story point
+- **Tamamlanan:** 20 story point
+- **Velocity:** 20 points
 - **Başarı Oranı:** %100
 
 ### 🔄 Sprint Retrospective
