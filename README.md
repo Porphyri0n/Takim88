@@ -796,6 +796,8 @@ Günlük Özet: Tanıtım videosu post-production tamamlandı. Sprint Review ve 
 **4. Sonuç Ekranı - Mobile**
 ![Sonuç Ekranı Mobile](https://github.com/Porphyri0n/Takim88/blob/main/Assets/mobile_1s3.png)
 ![Sonuç Ekranı Mobile](https://github.com/Porphyri0n/Takim88/blob/main/Assets/mobile_2s3.png)
+
+---
 *Mobil uyumlu sonuç görüntüleme*
 
 ---
