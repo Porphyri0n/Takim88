@@ -1110,6 +1110,370 @@ DermaCheck artık:
 </div>
 
 
+```markdown
+# 🚀 DermaCheck Kurulum Rehberi
+
+Bu rehber, DermaCheck AI Destekli Cilt Analizi Sistemi'ni yerel bilgisayarınızda çalıştırmak için gerekli tüm adımları içermektedir.
+
+---
+
+## 📋 Sistem Gereksinimleri
+
+### 🖥️ Minimum Donanım
+- **RAM:** 8GB (önerilen: 16GB)
+- **Depolama:** 5GB boş alan
+- **İşlemci:** Intel i5 veya AMD Ryzen 5 (ya da üzeri)
+- **GPU:** Opsiyonel (CPU ile çalışır)
+
+### 💻 Desteklenen İşletim Sistemleri
+- ✅ Windows 10/11
+- ✅ macOS 10.15+ (Catalina ve üzeri)
+- ✅ Ubuntu 18.04+ / Linux distroları
+
+### 🌐 Desteklenen Tarayıcılar
+- Chrome 90+
+- Firefox 88+
+- Safari 14+
+- Edge 90+
+
+---
+
+## 🔧 Ön Gereksinimler
+
+### 1. Python Kurulumu
+**Python 3.8 - 3.11** sürümlerinden birini kurun.
+
+#### Windows:
+```bash
+# Python.org'dan indirin veya Microsoft Store'dan kurun
+python --version  # Kontrol edin
+```
+
+#### macOS:
+```bash
+# Homebrew ile:
+brew install python@3.9
+python3 --version  # Kontrol edin
+```
+
+#### Ubuntu/Linux:
+```bash
+sudo apt update
+sudo apt install python3.9 python3.9-pip python3.9-venv
+python3 --version  # Kontrol edin
+```
+
+### 2. Git Kurulumu
+```bash
+# Windows: https://git-scm.com/download/win
+# macOS: brew install git
+# Ubuntu: sudo apt install git
+
+git --version  # Kontrol edin
+```
+
+---
+
+## 📦 Proje Kurulumu
+
+### 1. Repository'yi Klonlayın
+```bash
+git clone https://github.com/CutisAI/DermaCheck.git
+cd DermaCheck
+```
+
+### 2. Sanal Ortam Oluşturun ve Aktifleştirin
+
+#### Windows:
+```bash
+python -m venv dermacheck_env
+dermacheck_env\Scripts\activate
+```
+
+#### macOS/Linux:
+```bash
+python3 -m venv dermacheck_env
+source dermacheck_env/bin/activate
+```
+
+### 3. Gerekli Paketleri Kurun
+```bash
+pip install --upgrade pip
+pip install -r requirements.txt
+```
+
+**requirements.txt dosyası şu paketleri içermelidir:**
+```txt
+flask==2.3.3
+flask-cors==4.0.0
+tensorflow==2.13.0
+pillow==10.0.0
+numpy==1.24.3
+opencv-python==4.8.0.76
+google-generativeai==0.3.0
+python-dotenv==1.0.0
+gunicorn==21.2.0
+```
+
+---
+
+## 🤖 Model ve API Kurulumu
+
+### 1. Xception Model Dosyasını İndirin
+
+Model dosyası (`xception_v4_1_07_0.699.h5`) boyutu nedeniyle Git LFS veya alternatif yöntemle sağlanmalıdır.
+
+**Seçenek A: Model dosyasını manuel indirin**
+```bash
+# Google Drive, Dropbox veya model hosting platformundan indirin
+# Dosyayı proje kök dizinine yerleştirin
+```
+
+**Seçenek B: Script ile indirin**
+```bash
+# Eğer download script'i varsa:
+python download_model.py
+```
+
+### 2. Gemini API Anahtarı Ayarlayın
+
+#### API Anahtarı Alın:
+1. [Google AI Studio](https://makersuite.google.com/app/apikey) adresine gidin
+2. Google hesabınızla giriş yapın
+3. "Create API Key" butonuna tıklayın
+4. API anahtarınızı kopyalayın
+
+#### Ortam Değişkenini Ayarlayın:
+
+**Seçenek A: .env dosyası oluşturun (Önerilen)**
+```bash
+# Proje kök dizininde .env dosyası oluşturun
+echo "GEMINI_API_KEY=your_api_key_here" > .env
+```
+
+**Seçenek B: Sistem ortam değişkeni**
+
+##### Windows:
+```bash
+set GEMINI_API_KEY=your_api_key_here
+```
+
+##### macOS/Linux:
+```bash
+export GEMINI_API_KEY=your_api_key_here
+```
+
+---
+
+## 🚀 Uygulamayı Çalıştırma
+
+### 1. Flask Sunucusunu Başlatın
+```bash
+# Sanal ortamın aktif olduğundan emin olun
+python app.py
+```
+
+Başarılı başlangıç mesajı:
+```
+DermaCheck Xception Model Flask Uygulaması
+==================================================
+✅ Xception model başarıyla yüklendi
+📊 Model dosyası: xception_v4_1_07_0.699.h5
+🖼️  Giriş boyutu: 299x299
+==================================================
+🚀 Sunucu başlatılıyor...
+📱 Uygulamaya erişmek için: http://localhost:5000
+🔗 API endpoint: http://localhost:5000/predict
+==================================================
+```
+
+### 2. Tarayıcıda Açın
+```
+http://localhost:5000
+```
+
+---
+
+## 📁 Proje Dosya Yapısı
+
+```
+DermaCheck/
+├── app.py                          # Flask backend uygulaması
+├── index.html                      # Frontend arayüzü
+├── xception_v4_1_07_0.699.h5      # Xception CNN model dosyası
+├── requirements.txt                # Python bağımlılıkları
+├── .env                           # API anahtarları (oluşturacaksınız)
+├── .env.example                   # Örnek ortam değişkenleri
+├── README.md                      # Proje dokümantasyonu
+├── Assets/                        # Görseller ve medya dosyaları
+│   ├── dermacheck-logo.png
+│   ├── cutisAI-logo.png
+│   └── screenshots/
+├── docs/                          # Ek dokümantasyon
+└── tests/                         # Test dosyaları (opsiyonel)
+```
+
+---
+
+## 🧪 Test Etme
+
+### 1. API Sağlık Kontrolü
+```bash
+curl http://localhost:5000/health
+```
+
+Beklenen yanıt:
+```json
+{
+  "status": "healthy",
+  "model_loaded": true,
+  "version": "1.0.0"
+}
+```
+
+### 2. Örnek Görüntü Testi
+
+1. Tarayıcıda `http://localhost:5000` adresine gidin
+2. Herhangi bir cilt görüntüsü yükleyin (JPG, PNG formatında)
+3. Analiz sonuçlarının görüntülendiğini kontrol edin
+
+### 3. API Endpoint Testi
+```bash
+# Postman veya curl ile test edin
+curl -X POST -F "file=@example_image.jpg" http://localhost:5000/predict
+```
+
+---
+
+## ⚠️ Yaygın Sorunlar ve Çözümler
+
+### 1. Model Dosyası Bulunamadı
+**Hata:** `Model dosyası bulunamadı: xception_v4_1_07_0.699.h5`
+
+**Çözüm:**
+```bash
+# Model dosyasının doğru konumda olduğundan emin olun
+ls -la xception_v4_1_07_0.699.h5
+# Eğer yoksa model indirme adımlarını tekrarlayın
+```
+
+### 2. Gemini API Hatası
+**Hata:** `Gemini API key not found`
+
+**Çözüm:**
+```bash
+# .env dosyasını kontrol edin
+cat .env
+# API anahtarının doğru olduğundan emin olun
+```
+
+### 3. TensorFlow GPU Sorunu
+**Hata:** CUDA veya GPU ile ilgili uyarılar
+
+**Çözüm:**
+```bash
+# CPU versiyonunu kullanın (normal çalışma)
+pip uninstall tensorflow
+pip install tensorflow-cpu==2.13.0
+```
+
+### 4. Port Kullanımda Hatası
+**Hata:** `Port 5000 is already in use`
+
+**Çözüm:**
+```bash
+# Farklı port kullanın
+python app.py --port 5001
+# Veya çalışan process'i sonlandırın
+lsof -ti:5000 | xargs kill -9  # macOS/Linux
+netstat -ano | findstr :5000   # Windows
+```
+
+### 5. CORS Hatası
+**Hata:** Cross-origin request blocked
+
+**Çözüm:**
+- Flask uygulamasında CORS zaten etkinleştirilmiş
+- Tarayıcınızı yeniden başlatın
+- Farklı tarayıcı deneyin
+
+### 6. Bellek Yetersizliği
+**Hata:** `OutOfMemoryError` veya yavaş çalışma
+
+**Çözüm:**
+```bash
+# Bellek optimizasyonu için environment variable ekleyin
+export TF_FORCE_GPU_ALLOW_GROWTH=true
+# Veya CPU kullanımını sınırlayın
+export OMP_NUM_THREADS=4
+```
+
+---
+
+## 🔧 Geliştirici Modunda Çalıştırma
+
+### Debug Modu
+```bash
+export FLASK_ENV=development
+export FLASK_DEBUG=1
+python app.py
+```
+
+### Hot Reload
+```bash
+# Flask development server ile:
+flask --app app run --debug --host=0.0.0.0 --port=5000
+```
+
+---
+
+## 🌐 Production Deployment (Opsiyonel)
+
+### Gunicorn ile Çalıştırma
+```bash
+# Production server için:
+gunicorn --bind 0.0.0.0:5000 --workers 2 --timeout 120 app:app
+```
+
+### Docker ile Çalıştırma
+```dockerfile
+# Dockerfile örneği:
+FROM python:3.9-slim
+
+WORKDIR /app
+COPY requirements.txt .
+RUN pip install -r requirements.txt
+
+COPY . .
+EXPOSE 5000
+
+CMD ["gunicorn", "--bind", "0.0.0.0:5000", "app:app"]
+```
+
+```bash
+# Docker build ve run:
+docker build -t dermacheck .
+docker run -p 5000:5000 -e GEMINI_API_KEY=your_key dermacheck
+```
+
+---
+
+## 📚 Ek Kaynaklar
+
+### Dokumentasyon
+- **Proje GitHub:** [https://github.com/CutisAI/DermaCheck](https://github.com/CutisAI/DermaCheck)
+- **Flask Docs:** [https://flask.palletsprojects.com/](https://flask.palletsprojects.com/)
+- **TensorFlow Docs:** [https://www.tensorflow.org/](https://www.tensorflow.org/)
+- **Gemini API Docs:** [https://ai.google.dev/docs](https://ai.google.dev/docs)
+
+### Dataset
+- **HAM10000:** [Harvard Dataverse](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/DBW86T)
+- **ISIC Archive:** [https://www.isic-archive.com/](https://www.isic-archive.com/)
+
+### Model Detayları
+- **Xception Paper:** [https://arxiv.org/abs/1610.02357](https://arxiv.org/abs/1610.02357)
+- **Transfer Learning:** [TensorFlow Guide](https://www.tensorflow.org/tutorials/images/transfer_learning)
+```
 
 #### 📚 Kaynak
 
