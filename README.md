@@ -1110,7 +1110,6 @@ DermaCheck artık:
 </div>
 
 
-```markdown
 ## 🚀 DermaCheck Kurulum Rehberi
 
 Bu rehber, DermaCheck AI Destekli Cilt Analizi Sistemi'ni yerel bilgisayarınızda çalıştırmak için gerekli tüm adımları içermektedir.
