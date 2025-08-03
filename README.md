@@ -776,25 +776,26 @@ Günlük Özet: Tanıtım videosu post-production tamamlandı. Sprint Review ve 
 #### 🖼️ Sprint 3 Final Ürün Görüntüleri
 
 **1. Ana Sayfa ve Upload Arayüzü**
-![Boş Arayüz](https://github.com/Porphyri0n/Takim88/blob/main/Assets/sprint3-empty-interface.png)
+![Boş Arayüz](https://github.com/Porphyri0n/Takim88/blob/main/Assets/empty_interface.png)
 *Modern ve kullanıcı dostu ana sayfa tasarımı*
 
 ---
 
 **2. Analiz Süreci ve Yorumlama**
-![Analiz Süreci](https://github.com/Porphyri0n/Takim88/blob/main/Assets/sprint3-analysis-process.png)
+![Analiz Süreci](https://github.com/Porphyri0n/Takim88/blob/main/Assets/loading_interface.png)
 *Görüntü yükleme ve AI analiz süreci*
 
 ---
 
 **3. Sonuç Ekranı - Desktop**
-![Sonuç Ekranı Desktop](https://github.com/Porphyri0n/Takim88/blob/main/Assets/sprint3-results-desktop.png)
+![Sonuç Ekranı Desktop](https://github.com/Porphyri0n/Takim88/blob/main/Assets/results_interface.png)
 *Detaylı analiz sonuçları ve öneriler*
 
 ---
 
 **4. Sonuç Ekranı - Mobile**
-![Sonuç Ekranı Mobile](https://github.com/Porphyri0n/Takim88/blob/main/Assets/sprint3-results-mobile.png)
+![Sonuç Ekranı Mobile](https://github.com/Porphyri0n/Takim88/blob/main/Assets/mobile_1s3.png)
+![Sonuç Ekranı Mobile](https://github.com/Porphyri0n/Takim88/blob/main/Assets/mobile_2s3.png)
 *Mobil uyumlu sonuç görüntüleme*
 
 ---
