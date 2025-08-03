@@ -52,7 +52,11 @@
 
 
 ---
-
+📚 Proje Dokümantasyonu ve Kurulum
+🚀 Hızlı Erişim Menüsü
+<div align="center">
+📖 Bölüm📝 Açıklama🔗 Hızlı Erişim📖 Ürün AçıklamasıProje tanıtımı ve özelliklerÜrün Açıklaması🏁 Sprint 1Proje başlangıcı ve temel yapıSprint 1 Dokümantasyonu🚀 Sprint 2Model geliştirme ve arayüz tasarımıSprint 2 Dokümantasyonu🎯 Sprint 3Full entegrasyon ve proje finalizasyonuSprint 3 Dokümantasyonu⚙️ KurulumProjeyi çalıştırma rehberiKurulum Rehberi
+</div>
 ## 📖 Ürün Açıklaması
 
 DermaCheck, kullanıcıların yüklediği cilt görüntülerini yapay zekâ yardımıyla analiz ederek, potansiyel cilt rahatsızlıklarını ön değerlendirme amacıyla sınıflandıran, erişilebilir ve kullanıcı dostu bir web tabanlı yapay zekâ uygulamasıdır.
