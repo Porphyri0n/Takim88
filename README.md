@@ -801,7 +801,7 @@ Günlük Özet: Tanıtım videosu post-production tamamlandı. Sprint Review ve 
 
 ### 🎬 Ürün Tanıtım Videosu
 
-**📺 Demo Video:** [DermaCheck Tanıtım Videosu](https://github.com/Porphyri0n/Takim88/blob/main/Assets/dermacheck-demo-video.mp4)
+**📺 Demo Video:** [DermaCheck Tanıtım Videosu](https://drive.google.com/file/d/1rw_jYlj2Jmfqetmk7v8zn9zhf5Fub-nb/view?usp=sharing)
 
 Video İçeriği:
 - ✅ Proje tanıtımı ve amacı
