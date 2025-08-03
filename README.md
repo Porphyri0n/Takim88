@@ -1232,14 +1232,11 @@ Model dosyası (`xception_v4_1_07_0.699.h5`) boyutu nedeniyle Git LFS veya alter
 **Seçenek A: Model dosyasını manuel indirin**
 ```bash
 # Google Drive, Dropbox veya model hosting platformundan indirin
+#https://drive.google.com/file/d/1TaCxsNwJvmAd2ISKZLXieku9_Y504EZx/view?usp=drivesdk
 # Dosyayı proje kök dizinine yerleştirin
 ```
 
-**Seçenek B: Script ile indirin**
-```bash
-# Eğer download script'i varsa:
-python download_model.py
-```
+
 
 ### 2. Gemini API Anahtarı Ayarlayın
 
